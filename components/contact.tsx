@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Github, Linkedin, Twitter, ArrowUpRight, Check, Phone, MapPin } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, ArrowUpRight, Check, Phone, MapPin, Loader2 } from "lucide-react";
 
 const CONTACT_EMAIL = "szilagyidavid98@gmail.com";
 
@@ -17,18 +17,33 @@ export function Contact() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setError(null);
 
-    const subject = encodeURIComponent(`New contact form message from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -180,13 +195,21 @@ export function Contact() {
                     />
                   </div>
 
+                  {error && (
+                    <p className="text-sm text-red-400">{error}</p>
+                  )}
+
                   <motion.button
                     type="submit"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full py-3 px-6 rounded-lg bg-primary text-primary-foreground font-medium text-sm relative overflow-hidden group"
+                    disabled={loading}
+                    whileHover={{ scale: loading ? 1 : 1.02 }}
+                    whileTap={{ scale: loading ? 1 : 0.98 }}
+                    className="w-full py-3 px-6 rounded-lg bg-primary text-primary-foreground font-medium text-sm relative overflow-hidden group disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    <span className="relative z-10">Send Message</span>
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      {loading && <Loader2 className="w-4 h-4 animate-spin" />}
+                      {loading ? "Sending..." : "Send Message"}
+                    </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary to-cyan-500 opacity-100" />
                   </motion.button>
                 </div>
