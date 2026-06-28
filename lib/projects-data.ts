@@ -67,7 +67,7 @@ export const projectsData: Project[] = [
     timeframe: "2024 Feb - 2026 April",
     role: "Web Developer & Marketing Consultant",
     icon: "Globe",
-    size: "medium",
+    size: "small",
     metrics: { pages: "20+", speed: "<2s" },
     metricLabelsKey: { pages: "projects_pages", speed: "projects_speed" },
   },
