@@ -120,6 +120,61 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     footer_rights: "All rights reserved",
+
+    // Project Detail Page
+    project_backToProjects: "Back to Projects",
+    project_overview: "Overview",
+    project_challenge: "The Challenge",
+    project_solution: "The Solution",
+    project_features: "Key Features",
+    project_technologies: "Technologies",
+    project_timeline: "Timeline",
+    project_role: "Role",
+    project_links: "Links",
+    project_liveSite: "Live Site",
+    project_github: "GitHub Repository",
+    project_figma: "Figma Design",
+    project_adobexd: "Adobe XD Design",
+
+    // Shopify Project Detail
+    project_shopify_longDesc: "Managed and optimized a large-scale Shopify e-commerce store specializing in sustainable building materials. The project involved comprehensive product catalog management, customer journey optimization, and data-driven decision making to improve overall store performance.",
+    project_shopify_challenge: "The main challenge was managing a complex product catalog with 600+ items while maintaining consistent data quality and optimizing the customer journey. The store needed better organization, improved search functionality, and more effective merchandising strategies.",
+    project_shopify_solution: "Implemented a systematic approach to product management using Shopify's built-in tools combined with custom solutions. Analyzed customer behavior data to optimize product categorization and improve the checkout flow. Integrated analytics tools to track KPIs and make data-driven decisions.",
+    project_shopify_feature1: "Product catalog optimization with improved categorization",
+    project_shopify_feature2: "Customer journey analysis and checkout optimization",
+    project_shopify_feature3: "Marketing campaign integration and performance tracking",
+
+    // WordPress Project Detail
+    project_wordpress_longDesc: "Developed and maintained a company website for a UK-based business using WordPress. The project focused on improving website performance, user experience, and integrating digital marketing strategies to enhance online presence.",
+    project_wordpress_challenge: "The existing website had performance issues, poor SEO structure, and outdated design. It needed a complete overhaul to better represent the brand and support marketing initiatives.",
+    project_wordpress_solution: "Redesigned the website using modern WordPress practices with a focus on performance optimization, SEO best practices, and user experience. Integrated analytics and marketing tools to track performance.",
+    project_wordpress_feature1: "Complete website redesign with modern UI/UX",
+    project_wordpress_feature2: "SEO optimization and performance improvements",
+    project_wordpress_feature3: "Marketing integration and analytics setup",
+
+    // Frontend Project Detail
+    project_frontend_longDesc: "Contributed to the development of a frontend component system for an enterprise e-commerce platform. Worked within an Agile Scrum environment to build reusable components using C#, JavaScript, .NET and Bootstrap.",
+    project_frontend_challenge: "The platform needed a unified component system that could be reused across multiple implementations while maintaining consistency and ease of use for developers.",
+    project_frontend_solution: "Developed modular frontend components following best practices and design patterns. Collaborated with the team to ensure components were well-documented and tested.",
+    project_frontend_feature1: "Reusable component architecture",
+    project_frontend_feature2: "Cross-browser compatibility and responsive design",
+    project_frontend_feature3: "Comprehensive documentation and testing",
+
+    // UX Design Project Detail
+    project_ux_longDesc: "Created user-centered design solutions as part of Multimedia Design studies. This project focused on the complete design process from user research to high-fidelity prototypes.",
+    project_ux_challenge: "Understanding user needs and translating them into effective design solutions that balance aesthetics with functionality.",
+    project_ux_solution: "Applied user-centered design methodology with extensive research, iterative prototyping, and usability testing to create effective design solutions.",
+    project_ux_feature1: "User research and persona development",
+    project_ux_feature2: "Wireframing and interactive prototyping",
+    project_ux_feature3: "Usability testing and iteration",
+
+    // Headless Project Detail
+    project_headless_longDesc: "A headless e-commerce implementation separating the frontend presentation layer from the backend commerce platform. This approach provides greater flexibility and improved performance.",
+    project_headless_challenge: "Building a modern, fast e-commerce experience while integrating with existing systems and maintaining SEO capabilities.",
+    project_headless_solution: "Implemented a Next.js frontend with API-based integration to the commerce backend, optimizing for performance and developer experience.",
+    project_headless_feature1: "API-first architecture",
+    project_headless_feature2: "Server-side rendering for performance",
+    project_headless_feature3: "Optimized image delivery and caching",
   },
   hu: {
     // Navbar
@@ -228,6 +283,61 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     footer_rights: "Minden jog fenntartva",
+
+    // Project Detail Page
+    project_backToProjects: "Vissza a projektekhez",
+    project_overview: "Áttekintés",
+    project_challenge: "A kihívás",
+    project_solution: "A megoldás",
+    project_features: "Fő jellemzők",
+    project_technologies: "Technológiák",
+    project_timeline: "Időszak",
+    project_role: "Pozíció",
+    project_links: "Linkek",
+    project_liveSite: "Élő oldal",
+    project_github: "GitHub repository",
+    project_figma: "Figma terv",
+    project_adobexd: "Adobe XD terv",
+
+    // Shopify Project Detail
+    project_shopify_longDesc: "Fenntartható építőanyagokkal foglalkozó nagyüzemi Shopify webáruház kezelése és optimalizálása. A projekt átfogó termékkatalógus-kezelést, vásárlói út optimalizálást és adatalapú döntéshozatalt foglalt magában az áruház teljesítményének javítása érdekében.",
+    project_shopify_challenge: "A fő kihívás az 600+ tételből álló összetett termék katalógus kezelése volt a következetes adatminőség megőrzése mellett, a vásárlói út optimalizálásával együtt. Az áruháznak jobb szervezésre, jobb keresési funkcióra és hatékonyabb árubemutatási stratégiákra volt szüksége.",
+    project_shopify_solution: "Rendszertani megközelítést alkalmaztam a termékmenedzsmenthez a Shopify beépített eszközeinek és egyedi megoldások kombinálásával. Elemeztem a vásárlói magatartás adatait a termék kategorizálás optimalizálása és a fizetési folyamat javítása érdekében. Integráltam az analitikai eszközöket a KPI-ok követésére és adatalapú döntések meghozatalára.",
+    project_shopify_feature1: "Termék katalógus optimalizálás javított kategorizálással",
+    project_shopify_feature2: "Vásárlói út elemzés és fizetési folyamat optimalizálás",
+    project_shopify_feature3: "Marketing kampány integráció és teljesítmény követés",
+
+    // WordPress Project Detail
+    project_wordpress_longDesc: "Céges weboldal fejlesztése és karbantartása egy Egyesült Királyságbeli vállalkozás számára WordPress használatával. A projekt a weboldal teljesítményének, felhasználói élményének javítására és digitális marketing stratégiák integrálására összpontosított az online jelenlét növelése érdekében.",
+    project_wordpress_challenge: "A meglévő weboldal teljesítményproblémákkal, gyenge SEO szerkezettel és elavott designnal rendelkezett. Teljes felújításra volt szükség a márka jobb képviselete és a marketing kezdeményezések támogatása érdekében.",
+    project_wordpress_solution: "Újraterveztem a weboldalt modern WordPress gyakorlatok alkalmazásával, fókuszálva a teljesítmény-optimalizálásra, SEO legjobb gyakorlatokra és felhasználói élményre. Integráltam az analitikai és marketing eszközöket a teljesítmény követésére.",
+    project_wordpress_feature1: "Teljes weboldal újraterv modern UI/UX-al",
+    project_wordpress_feature2: "SEO optimalizálás és teljesítmény javítások",
+    project_wordpress_feature3: "Marketing integráció és analitika beállítás",
+
+    // Frontend Project Detail
+    project_frontend_longDesc: "Hozzájárulás egy frontend komponens rendszer fejlesztéséhez egy vállalati e-kereskedelmi platform számára. Agile Scrum környezetben dolgoztam újrafelhasználható komponensek építésén C#, JavaScript, .NET és Bootstrap használatával.",
+    project_frontend_challenge: "A platformnak egy egységes komponens rendszerre volt szüksége, amely több implementációban is újrafelhasználható, miközben megőrzi a következetességet és a fejlesztők számára való egyszerű használatot.",
+    project_frontend_solution: "Moduláris frontend komponenseket fejlesztettem a legjobb gyakorlatok és tervezési minták követésével. Együttműködtem a csapattal a komponensek megfelelő dokumentálása és tesztelése érdekében.",
+    project_frontend_feature1: "Újrafelhasználható komponens architektúra",
+    project_frontend_feature2: "Böngésző-kompatibilitás és reszponzív design",
+    project_frontend_feature3: "Átfogó dokumentáció és tesztelés",
+
+    // UX Design Project Detail
+    project_ux_longDesc: "Felhasználóközpontú design megoldások készítése a Multimédia Design tanulmányok részeként. Ez a projekt a teljes design folyamatra összpontosított a felhasználói kutatástól a magas hűségű prototípusokig.",
+    project_ux_challenge: "A felhasználói igények megértése és hatékony design megoldásokká alakítása, amelyek egyensúlyt teremtenek az esztétika és a funkcionalitás között.",
+    project_ux_solution: "Felhasználóközpontú design módszertant alkalmaztam kiterjedt kutatással, iteratív prototípus készítéssel és használhatósági teszteléssel hatékony design megoldások létrehozásához.",
+    project_ux_feature1: "Felhasználói kutatás és persona fejlesztés",
+    project_ux_feature2: "Vázlatkészítés és interaktív prototípusok",
+    project_ux_feature3: "Használhatósági tesztelés és iteráció",
+
+    // Headless Project Detail
+    project_headless_longDesc: "Headless e-kereskedelmi implementáció, amely elválasztja a frontend megjelenítési réteget a backend kereskedelmi platformtól. Ez a megközelítés nagyobb rugalmasságot és jobb teljesítményt nyújt.",
+    project_headless_challenge: "Modern, gyors e-kereskedelmi élmény építése meglévő rendszerekkel való integráció mellett, az SEO képességek megőrzésével.",
+    project_headless_solution: "Next.js frontendet implementáltam API-alapú integrációval a kereskedelmi backendhez, optimalizálva a teljesítményt és a fejlesztői élményt.",
+    project_headless_feature1: "API-first architektúra",
+    project_headless_feature2: "Szerver-side renderelés a teljesítményért",
+    project_headless_feature3: "Optimalizált kézbesítés és gyorsítótárazás",
   },
 };
 
