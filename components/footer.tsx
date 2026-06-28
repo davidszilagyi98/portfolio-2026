@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
 
+
+const CONTACT_EMAIL = "szilagyidavid98@gmail.com";
+
 const socials = [
-  { name: "GitHub", href: "https://github.com", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "Twitter", href: "https://twitter.com", icon: Twitter },
-  { name: "Email", href: "mailto:szilagyidavid98@gmail.com", icon: Mail },
+  { name: "GitHub", href: "https://github.com/davidszilagyi98", icon: Github },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/david-szilagyi/", icon: Linkedin },
+  { name: "Email", href: `mailto:${CONTACT_EMAIL}`, icon: Mail },
 ];
 
 export function Footer() {
