@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
 
 export function Hero() {
+  const { t } = useI18n();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Radial gradient background */}
@@ -50,7 +53,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
           </span>
-          <span className="text-sm text-muted-foreground">Open for opportunities</span>
+          <span className="text-sm text-muted-foreground">{t("hero_available")}</span>
         </motion.div>
 
         {/* Main heading */}
@@ -61,11 +64,11 @@ export function Hero() {
           className="space-y-4"
         >
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-none">
-            <span className="text-gradient-subtle">Web Developer</span>
+            <span className="text-gradient-subtle">{t("hero_title1")}</span>
             <br />
-            <span className="text-gradient">& Digital Product</span>
+            <span className="text-gradient">{t("hero_title2")}</span>
             <br />
-            <span className="text-gradient-subtle">Specialist</span>
+            <span className="text-gradient-subtle">{t("hero_title3")}</span>
           </h1>
         </motion.div>
 
@@ -76,9 +79,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
         >
-          I&apos;m David Szilagyi, a web developer with a background in digital product development,
-          UX design, and e-commerce. I build and optimize digital solutions with a strong focus
-          on user experience, customer journeys, and online business performance.
+          {t("hero_description")}
         </motion.p>
 
         {/* CTA buttons */}
@@ -97,7 +98,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-cyan-500 opacity-100 group-hover:opacity-90 transition-opacity" />
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-cyan-500 blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
             <span className="relative z-10 flex items-center gap-2 text-white">
-              View Projects
+              {t("hero_viewProjects")}
               <Sparkles className="w-4 h-4" />
             </span>
           </motion.a>
@@ -107,7 +108,7 @@ export function Hero() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            Get in Touch
+            {t("hero_getInTouch")}
           </motion.a>
         </motion.div>
 
@@ -144,7 +145,7 @@ export function Hero() {
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center gap-2 text-muted-foreground"
         >
-          <span className="text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-xs tracking-widest uppercase">{t("hero_scroll")}</span>
           <ArrowDown className="w-4 h-4" />
         </motion.div>
       </motion.div>

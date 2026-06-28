@@ -4,17 +4,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
-
-const navLinks = [
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
-];
+import { LanguageToggle } from "./language-toggle";
+import { useI18n } from "@/lib/i18n-context";
 
 export function Navbar() {
+  const { t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const navLinks = [
+    { href: "#projects", label: t("nav_projects") },
+    { href: "#experience", label: t("nav_experience") },
+    { href: "#skills", label: t("nav_skills") },
+    { href: "#contact", label: t("nav_contact") },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -67,21 +70,29 @@ export function Navbar() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.35 }}
               >
+                <LanguageToggle />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 }}
+              >
                 <ThemeToggle />
               </motion.div>
               <motion.a
                 href="#contact"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.45 }}
                 className="px-5 py-2 text-sm font-medium rounded-full bg-primary/10 hover:bg-primary/20 dark:bg-white/5 dark:hover:bg-white/10 border border-primary/20 dark:border-white/10 transition-colors"
               >
-                Say Hello
+                {t("nav_sayHello")}
               </motion.a>
             </div>
 
             {/* Mobile menu button */}
             <div className="flex md:hidden items-center gap-2">
+              <LanguageToggle />
               <ThemeToggle />
               <motion.button
                 initial={{ opacity: 0 }}
@@ -117,7 +128,7 @@ export function Navbar() {
             >
               <div className="flex items-center justify-between mb-8">
                 <a href="#" className="text-lg font-semibold">
-                  alex<span className="text-primary">.</span>
+                  david<span className="text-primary">.</span>
                 </a>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -146,6 +157,10 @@ export function Navbar() {
 
               <div className="mt-auto space-y-4">
                 <div className="flex items-center justify-between">
+                  <span className="text-sm text-muted-foreground">Language</span>
+                  <LanguageToggle />
+                </div>
+                <div className="flex items-center justify-between">
                   <span className="text-sm text-muted-foreground">Theme</span>
                   <ThemeToggle />
                 </div>
@@ -154,7 +169,7 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="block w-full py-3 text-center text-sm font-medium rounded-full bg-primary text-primary-foreground"
                 >
-                  Say Hello
+                  {t("nav_sayHello")}
                 </a>
               </div>
             </motion.div>

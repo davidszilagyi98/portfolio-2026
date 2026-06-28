@@ -2,66 +2,68 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-
-const experiences = [
-  {
-    role: "Web & E-commerce Specialist",
-    company: "Buildgreener",
-    location: "UK",
-    period: "2024 Feb — 2026 April",
-    description: "Managed and optimized a Shopify-based e-commerce store with 600+ products. Maintained product data, categories, and merchandising to ensure an effective customer journey.",
-    highlights: [
-      "Analyzed webshop performance, customer behavior, and KPIs to support commercial decisions",
-      "Supported promotions, campaigns, and online sales initiatives",
-      "Monitored market trends and competitors while collaborating with cross-functional teams",
-    ],
-    current: false,
-  },
-  {
-    role: "Web Developer & Digital Marketing Consultant",
-    company: "Kooka",
-    location: "UK",
-    period: "2024 Feb — 2026 April",
-    description: "Developed and maintained the company website using WordPress. Improved the website structure, performance, and user experience. Assisted with digital marketing strategies to improve online presence.",
-    highlights: [
-      "Improved website structure, performance, and user experience",
-      "Assisted with digital marketing strategies to improve online presence",
-      "Optimized website content and functionality",
-    ],
-    current: false,
-  },
-  {
-    role: "Frontend Developer Intern",
-    company: "DynamicWeb",
-    location: "Aarhus, Denmark",
-    period: "2023 Aug — 2024 Jan",
-    description: "Developed frontend components using C#, JavaScript, .NET and Bootstrap. Participated in Agile Scrum development processes and collaborated with Product Managers, Designers and Developers.",
-    highlights: [
-      "Worked with Azure DevOps, code reviews and sprint planning",
-      "Contributed to e-commerce platform development and bug fixing",
-      "Improved user experience and platform functionality",
-    ],
-    current: false,
-  },
-  {
-    role: "Manager",
-    company: "Fratelli",
-    location: "Aarhus, Denmark",
-    period: "2018 Aug — 2023 Aug",
-    description: "Achieved to reduce expenses and increased the sales which helped the company to be able to reinvest the revenue into the business. Responsible for a team containing 25 members.",
-    highlights: [
-      "Reduced expenses and increased sales, enabling reinvestment",
-      "Responsible for a team containing 25 members",
-      "Training and hiring new people",
-      "Managed situations from both business and employee perspectives",
-    ],
-    current: false,
-  },
-];
+import { useI18n } from "@/lib/i18n-context";
 
 export function Experience() {
+  const { t } = useI18n();
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+
+  const experiences = [
+    {
+      role: t("experience_buildgreener_role"),
+      company: "Buildgreener",
+      location: "UK",
+      period: "2024 Feb — 2026 April",
+      description: t("experience_buildgreener_desc"),
+      highlights: [
+        t("experience_buildgreener_h1"),
+        t("experience_buildgreener_h2"),
+        t("experience_buildgreener_h3"),
+      ],
+      current: false,
+    },
+    {
+      role: t("experience_kooka_role"),
+      company: "Kooka",
+      location: "UK",
+      period: "2024 Feb — 2026 April",
+      description: t("experience_kooka_desc"),
+      highlights: [
+        t("experience_kooka_h1"),
+        t("experience_kooka_h2"),
+        t("experience_kooka_h3"),
+      ],
+      current: false,
+    },
+    {
+      role: t("experience_dynamicweb_role"),
+      company: "DynamicWeb",
+      location: "Aarhus, Denmark",
+      period: "2023 Aug — 2024 Jan",
+      description: t("experience_dynamicweb_desc"),
+      highlights: [
+        t("experience_dynamicweb_h1"),
+        t("experience_dynamicweb_h2"),
+        t("experience_dynamicweb_h3"),
+      ],
+      current: false,
+    },
+    {
+      role: t("experience_fratelli_role"),
+      company: "Fratelli",
+      location: "Aarhus, Denmark",
+      period: "2018 Aug — 2023 Aug",
+      description: t("experience_fratelli_desc"),
+      highlights: [
+        t("experience_fratelli_h1"),
+        t("experience_fratelli_h2"),
+        t("experience_fratelli_h3"),
+        t("experience_fratelli_h4"),
+      ],
+      current: false,
+    },
+  ];
 
   return (
     <section id="experience" className="relative py-32 overflow-hidden">
@@ -78,13 +80,13 @@ export function Experience() {
           className="max-w-2xl mb-20"
         >
           <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
-            Career
+            {t("experience_badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-gradient-subtle">
-            Experience
+            {t("experience_title")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            A track record of delivering impactful digital solutions across e-commerce, web development, and team management.
+            {t("experience_description")}
           </p>
         </motion.div>
 
@@ -137,7 +139,7 @@ export function Experience() {
                       </div>
                       {exp.current && (
                         <span className="px-2.5 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20">
-                          Current
+                          {t("experience_current")}
                         </span>
                       )}
                     </div>

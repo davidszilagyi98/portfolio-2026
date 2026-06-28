@@ -2,70 +2,75 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, ArrowUpRight, ShoppingCart, Globe, Code, Database, Palette, Smartphone } from "lucide-react";
-
-const projects = [
-  {
-    id: 1,
-    title: "Shopify E-commerce Store",
-    description: "Managed and optimized a Shopify-based e-commerce store with 600+ products. Improved product data organization, customer journey flow, and merchandising effectiveness.",
-    image: "/bg-screenshot.png",
-    tags: ["Shopify", "E-commerce", "Analytics"],
-    link: "https://buildgreener.co.uk/",
-    target: "_blank",
-    size: "large",
-    icon: ShoppingCart,
-    metrics: { products: "600+", growth: "+15%" },
-  },
-  {
-    id: 2,
-    title: "WordPress Company Website",
-    description: "Developed and maintained a company website using WordPress. Improved website structure, performance, and user experience with digital marketing integration.",
-    image: "/wp-screenshot.png",
-    tags: ["WordPress", "SEO", "Performance"],
-    link: "https://kooka.co.uk/",
-    target: "_blank",
-    size: "medium",
-    icon: Globe,
-    metrics: { pages: "20+", speed: "<2s" },
-  },
-  {
-    id: 3,
-    title: "Frontend Component System",
-    description: "Developed reusable frontend components using C#, JavaScript, .NET and Bootstrap within an Agile Scrum environment. Contributed to e-commerce platform development.",
-    image: "/dw-swift.png",
-    tags: ["C#", ".NET", "Bootstrap"],
-    link: "https://dynamicweb.com/accelerators/dynamicweb-swift",
-    target: "_blank",
-    size: "medium",
-    icon: Code,
-    metrics: { components: "30+", reviews: "50+" },
-  },
-  {
-    id: 4,
-    title: "UX Design System",
-    description: "Created user-centered interface designs and responsive web solutions as part of Multimedia Design studies. Focused on user research, prototyping, and usability testing.",
-    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Figma", "Adobe XD", "Prototyping"],
-    link: "#",
-    size: "small",
-    icon: Palette,
-  },
-  {
-    id: 5,
-    title: "Digital Marketing Dashboard",
-    description: "Analyzed webshop performance, customer behavior, and KPIs to support commercial decisions. Monitored market trends and competitor activities.",
-    image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Analytics", "KPI", "Marketing"],
-    link: "#",
-    size: "small",
-    icon: Database,
-  },
-];
+import { ExternalLink, ArrowUpRight, ShoppingCart, Globe, Code, Database, Palette } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
 
 export function Projects() {
+  const { t } = useI18n();
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+
+  const projects = [
+    {
+      id: 1,
+      title: t("projects_shopify_title"),
+      description: t("projects_shopify_desc"),
+      image: "/bg-screenshot.png",
+      tags: ["Shopify", "E-commerce", "Analytics"],
+      link: "https://buildgreener.co.uk/",
+      target: "_blank",
+      size: "large",
+      icon: ShoppingCart,
+      metrics: { products: "600+", growth: "+15%" },
+      metricLabels: { products: t("projects_products"), growth: t("projects_growth") },
+    },
+    {
+      id: 2,
+      title: t("projects_wordpress_title"),
+      description: t("projects_wordpress_desc"),
+      image: "/wp-screenshot.png",
+      tags: ["WordPress", "SEO", "Performance"],
+      link: "https://kooka.co.uk/",
+      target: "_blank",
+      size: "medium",
+      icon: Globe,
+      metrics: { pages: "20+", speed: "<2s" },
+      metricLabels: { pages: t("projects_pages"), speed: t("projects_speed") },
+    },
+    {
+      id: 3,
+      title: t("projects_frontend_title"),
+      description: t("projects_frontend_desc"),
+      image: "/dw-swift.png",
+      tags: ["C#", ".NET", "Bootstrap"],
+      link: "https://dynamicweb.com/accelerators/dynamicweb-swift",
+      target: "_blank",
+      size: "medium",
+      icon: Code,
+      metrics: { components: "30+", reviews: "50+" },
+      metricLabels: { components: t("projects_components"), reviews: t("projects_reviews") },
+    },
+    {
+      id: 4,
+      title: t("projects_ux_title"),
+      description: t("projects_ux_desc"),
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+      tags: ["Figma", "Adobe XD", "Prototyping"],
+      link: "#",
+      size: "small",
+      icon: Palette,
+    },
+    {
+      id: 5,
+      title: t("projects_dashboard_title"),
+      description: t("projects_dashboard_desc"),
+      image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800",
+      tags: ["Analytics", "KPI", "Marketing"],
+      link: "#",
+      size: "small",
+      icon: Database,
+    },
+  ];
 
   return (
     <section id="projects" className="relative py-32 overflow-hidden">
@@ -82,13 +87,13 @@ export function Projects() {
           className="max-w-2xl mb-16"
         >
           <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
-            Featured Work
+            {t("projects_badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-gradient-subtle">
-            Projects
+            {t("projects_title")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            A selection of projects showcasing expertise in e-commerce, web development, and digital product optimization.
+            {t("projects_description")}
           </p>
         </motion.div>
 
@@ -159,12 +164,12 @@ export function Projects() {
                   </p>
 
                   {/* Metrics (for large cards) */}
-                  {project.metrics && (
+                  {project.metrics && project.metricLabels && (
                     <div className="flex gap-4 mt-4">
                       {Object.entries(project.metrics).map(([key, value]) => (
                         <div key={key} className="text-xs">
                           <span className="text-primary font-semibold">{value}</span>
-                          <span className="text-muted-foreground ml-1">{key}</span>
+                          <span className="text-muted-foreground ml-1">{project.metricLabels![key as keyof typeof project.metricLabels]}</span>
                         </div>
                       ))}
                     </div>
@@ -188,7 +193,7 @@ export function Projects() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
           >
-            <span>View all projects on GitHub</span>
+            <span>{t("projects_viewAll")}</span>
             <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
         </motion.div>

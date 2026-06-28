@@ -2,65 +2,67 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Globe, Palette, Terminal, Users, BarChart, FileText, Figma, Languages } from "lucide-react";
-
-const skillCategories = [
-  {
-    title: "Frontend Development",
-    icon: Code,
-    skills: ["HTML / CSS / Bootstrap", "JavaScript / React.js / Next.js", "C# / .NET / Unity", "Git / DevOps / Visual Studio"],
-  },
-  {
-    title: "CMS & E-commerce",
-    icon: Globe,
-    skills: ["WordPress", "Shopify", "Content Management", "Product Merchandising"],
-  },
-  {
-    title: "UX / UI Design",
-    icon: Palette,
-    skills: ["Photoshop", "Figma", "Adobe XD", "User Research", "Usability Testing"],
-  },
-  {
-    title: "Digital Marketing",
-    icon: BarChart,
-    skills: ["Google Analytics", "Google Ads", "SEO", "Performance Analysis"],
-  },
-  {
-    title: "Wireframing & Prototyping",
-    icon: FileText,
-    skills: ["Wireframing", "Prototyping", "User Flows", "Information Architecture"],
-  },
-  {
-    title: "Languages",
-    icon: Languages,
-    skills: ["Hungarian - Native", "English - C1", "Italian - B1", "Danish - B1"],
-  },
-];
-
-const education = [
-  {
-    degree: "Digital Concept Development",
-    school: "Business Academy Aarhus",
-    period: "2022 - 2024",
-    description: "Bachelor's top-up programme expanding knowledge in UX design, concept development, and game development using Unity, C#, and Blender.",
-  },
-  {
-    degree: "Multimedia Design",
-    school: "Business Academy Aarhus",
-    period: "2020 - 2022",
-    description: "Focus on UX/UI design and frontend development, covering the full process from user research to implementation.",
-  },
-  {
-    degree: "Marketing Management",
-    school: "Business Academy Aarhus",
-    period: "2018 - 2019",
-    description: "Foundation in developing and analyzing businesses, with focus on marketing strategies and business development.",
-  },
-];
+import { Code, Globe, Palette, ChartBar as BarChart, FileText, Languages } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
 
 export function Skills() {
+  const { t } = useI18n();
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+
+  const skillCategories = [
+    {
+      title: t("skills_frontend_title"),
+      icon: Code,
+      skills: ["HTML / CSS / Bootstrap", "JavaScript / React.js / Next.js", "C# / .NET / Unity", "Git / DevOps / Visual Studio"],
+    },
+    {
+      title: t("skills_cms_title"),
+      icon: Globe,
+      skills: ["WordPress", "Shopify", "Content Management", "Product Merchandising"],
+    },
+    {
+      title: t("skills_ux_title"),
+      icon: Palette,
+      skills: ["Photoshop", "Figma", "Adobe XD", "User Research", "Usability Testing"],
+    },
+    {
+      title: t("skills_marketing_title"),
+      icon: BarChart,
+      skills: ["Google Analytics", "Google Ads", "SEO", "Performance Analysis"],
+    },
+    {
+      title: t("skills_wireframing_title"),
+      icon: FileText,
+      skills: ["Wireframing", "Prototyping", "User Flows", "Information Architecture"],
+    },
+    {
+      title: t("skills_languages_title"),
+      icon: Languages,
+      skills: ["Hungarian - Native", "English - C1", "Italian - B1", "Danish - B1"],
+    },
+  ];
+
+  const education = [
+    {
+      degree: t("skills_edu1_degree"),
+      school: "Business Academy Aarhus",
+      period: "2022 - 2024",
+      description: t("skills_edu1_desc"),
+    },
+    {
+      degree: t("skills_edu2_degree"),
+      school: "Business Academy Aarhus",
+      period: "2020 - 2022",
+      description: t("skills_edu2_desc"),
+    },
+    {
+      degree: t("skills_edu3_degree"),
+      school: "Business Academy Aarhus",
+      period: "2018 - 2019",
+      description: t("skills_edu3_desc"),
+    },
+  ];
 
   return (
     <section id="skills" className="relative py-32 overflow-hidden">
@@ -77,13 +79,13 @@ export function Skills() {
           className="max-w-2xl mb-20 text-center mx-auto"
         >
           <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
-            Capabilities
+            {t("skills_badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-gradient-subtle">
-            Skills & Education
+            {t("skills_title")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            A blend of technical development, UX design, and digital marketing expertise honed through education and professional experience.
+            {t("skills_description")}
           </p>
         </motion.div>
 
@@ -128,10 +130,10 @@ export function Skills() {
           className="text-center mb-12"
         >
           <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
-            Education
+            {t("skills_education_badge")}
           </span>
           <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-gradient-subtle">
-            Academic Background
+            {t("skills_education_title")}
           </h3>
         </motion.div>
 

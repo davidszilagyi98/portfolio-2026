@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
 
 const socials = [
   { name: "GitHub", href: "https://github.com", icon: Github },
@@ -11,6 +12,7 @@ const socials = [
 ];
 
 export function Footer() {
+  const { t } = useI18n();
   const year = new Date().getFullYear();
 
   return (
@@ -27,7 +29,7 @@ export function Footer() {
               david<span className="text-primary">.</span>
             </motion.a>
             <p className="text-sm text-muted-foreground">
-              {year} All rights reserved
+              {year} {t("footer_rights")}
             </p>
           </div>
 

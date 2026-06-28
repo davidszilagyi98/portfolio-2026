@@ -2,7 +2,8 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Github, Linkedin, Twitter, ArrowUpRight, Check, Phone, MapPin, Loader2 } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, ArrowUpRight, Check, Phone, MapPin, Loader as Loader2 } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
 
 const CONTACT_EMAIL = "szilagyidavid98@gmail.com";
 
@@ -14,6 +15,7 @@ const links = [
 ];
 
 export function Contact() {
+  const { t } = useI18n();
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
@@ -40,7 +42,7 @@ export function Contact() {
 
       setSubmitted(true);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to send message. Please try again.");
+      setError(t("contact_form_error"));
     } finally {
       setLoading(false);
     }
@@ -63,13 +65,13 @@ export function Contact() {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
-            Let's Connect
+            {t("contact_badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-gradient-subtle">
-            Get in Touch
+            {t("contact_title")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            I'm currently open for new opportunities. Whether you have a project in mind or just want to chat, feel free to reach out.
+            {t("contact_description")}
           </p>
         </motion.div>
 
@@ -81,7 +83,7 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-4"
           >
-            <h3 className="text-sm font-medium text-muted-foreground mb-6">Connect with me</h3>
+            <h3 className="text-sm font-medium text-muted-foreground mb-6">{t("contact_connectWithMe")}</h3>
             <div className="grid grid-cols-2 gap-3">
               {links.map((link, index) => {
                 const Icon = link.icon;
@@ -142,9 +144,9 @@ export function Contact() {
                 <div className="w-16 h-16 rounded-full bg-emerald-500/20 flex items-center justify-center mb-4">
                   <Check className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Message Sent</h3>
+                <h3 className="text-xl font-semibold mb-2">{t("contact_form_success")}</h3>
                 <p className="text-muted-foreground text-sm">
-                  Thanks for reaching out. I'll get back to you soon.
+                  {t("contact_form_successDesc")}
                 </p>
               </motion.div>
             ) : (
@@ -152,7 +154,7 @@ export function Contact() {
                 <div className="glass-card rounded-2xl p-6 space-y-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-xs text-muted-foreground">
-                      Name
+                      {t("contact_form_name")}
                     </label>
                     <input
                       id="name"
@@ -160,14 +162,14 @@ export function Contact() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 text-sm bg-muted rounded-lg border border-border focus:border-primary/50 focus:outline-none focus:ring-1 focus:ring-primary/25 transition-colors placeholder:text-muted-foreground/50"
-                      placeholder="Your name"
+                      placeholder={t("contact_form_namePlaceholder")}
                       required
                     />
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-xs text-muted-foreground">
-                      Email
+                      {t("contact_form_email")}
                     </label>
                     <input
                       id="email"
@@ -175,14 +177,14 @@ export function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 text-sm bg-muted rounded-lg border border-border focus:border-primary/50 focus:outline-none focus:ring-1 focus:ring-primary/25 transition-colors placeholder:text-muted-foreground/50"
-                      placeholder="you@example.com"
+                      placeholder={t("contact_form_emailPlaceholder")}
                       required
                     />
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-xs text-muted-foreground">
-                      Message
+                      {t("contact_form_message")}
                     </label>
                     <textarea
                       id="message"
@@ -190,7 +192,7 @@ export function Contact() {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={4}
                       className="w-full px-4 py-3 text-sm bg-muted rounded-lg border border-border focus:border-primary/50 focus:outline-none focus:ring-1 focus:ring-primary/25 transition-colors placeholder:text-muted-foreground/50 resize-none"
-                      placeholder="Tell me about your project..."
+                      placeholder={t("contact_form_messagePlaceholder")}
                       required
                     />
                   </div>
@@ -208,7 +210,7 @@ export function Contact() {
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       {loading && <Loader2 className="w-4 h-4 animate-spin" />}
-                      {loading ? "Sending..." : "Send Message"}
+                      {loading ? t("contact_form_sending") : t("contact_form_send")}
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary to-cyan-500 opacity-100" />
                   </motion.button>
