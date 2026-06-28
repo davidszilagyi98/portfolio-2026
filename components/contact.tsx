@@ -8,9 +8,8 @@ import { useI18n } from "@/lib/i18n-context";
 const CONTACT_EMAIL = "szilagyidavid98@gmail.com";
 
 const links = [
-  { name: "GitHub", href: "https://github.com", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "Twitter", href: "https://twitter.com", icon: Twitter },
+  { name: "GitHub", href: "https://github.com/davidszilagyi98", icon: Github },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/david-szilagyi/", icon: Linkedin },
   { name: "Email", href: `mailto:${CONTACT_EMAIL}`, icon: Mail },
 ];
 
@@ -103,7 +102,7 @@ export function Contact() {
                     </div>
                     <div className="flex-1">
                       <p className="font-medium text-sm">{link.name}</p>
-                      <p className="text-xs text-muted-foreground">@dszilagyi</p>
+                      {/* <p className="text-xs text-muted-foreground">@dszilagyi</p> */}
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                   </motion.a>

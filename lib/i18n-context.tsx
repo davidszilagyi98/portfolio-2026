@@ -43,7 +43,7 @@ const translations: Record<Language, Record<string, string>> = {
     projects_frontend_desc: "Developed reusable frontend components using C#, JavaScript, .NET and Bootstrap within an Agile Scrum environment. Contributed to e-commerce platform development.",
     projects_ux_title: "UX Design System",
     projects_ux_desc: "Created user-centered interface designs and responsive web solutions as part of Multimedia Design studies. Focused on user research, prototyping, and usability testing.",
-    projects_dashboard_title: "Digital Marketing Dashboard",
+    projects_dashboard_title: "Digital concept development",
     projects_dashboard_desc: "Analyzed webshop performance, customer behavior, and KPIs to support commercial decisions. Monitored market trends and competitor activities.",
     projects_viewAll: "View all projects on GitHub",
     projects_products: "products",
@@ -52,6 +52,8 @@ const translations: Record<Language, Record<string, string>> = {
     projects_speed: "speed",
     projects_components: "components",
     projects_reviews: "reviews",
+    projects_headless_ecommerce_title: "Headless E-commerce",
+     projects_headless_ecommerce_desc: "Headless implementation",
 
     // Experience
     experience_badge: "Career",
@@ -149,7 +151,7 @@ const translations: Record<Language, Record<string, string>> = {
     projects_frontend_desc: "Újrafelhasználható frontend komponensek fejlesztése C#, JavaScript, .NET és Bootstrap használatával Agile Scrum környezetben. Hozzájárulás az e-kereskedelmi platform fejlesztéséhez.",
     projects_ux_title: "UX Design Rendszer",
     projects_ux_desc: "Felhasználóközpontú interfész tervek és reszponzív web megoldások készítése a Multimédia Design tanulmányok részeként. Felhasználói kutatásra, prototípus készítésre és használhatósági tesztelésre fókuszálva.",
-    projects_dashboard_title: "Digitális Marketing Dashboard",
+    projects_dashboard_title: "Digital concept development",
     projects_dashboard_desc: "Webáruház teljesítményének, vásárlói magatartás és KPI-ok elemzése az üzleti döntések támogatásához. Piactrendek és versenytársak figyelése.",
     projects_viewAll: "Összes projekt megtekintése GitHubon",
     projects_products: "termék",
@@ -158,6 +160,8 @@ const translations: Record<Language, Record<string, string>> = {
     projects_speed: "sebesség",
     projects_components: "komponens",
     projects_reviews: "revízió",
+    projects_headless_ecommerce_title: "Headless E-commerce",
+    projects_headless_ecommerce_desc: "Headless implementation",
 
     // Experience
     experience_badge: "Karrier",
