@@ -43,7 +43,7 @@ export const projectsData: Project[] = [
     timeframe: "2024 Feb - 2026 April",
     role: "Web & E-commerce Specialist",
     icon: "ShoppingCart",
-    size: "medium",
+    size: "large",
     metrics: { products: "600+", growth: "+15%" },
     metricLabelsKey: { products: "projects_products", growth: "projects_growth" },
   },
