@@ -132,7 +132,7 @@ export function Projects() {
         </div>
 
         {/* View all link */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -147,7 +147,7 @@ export function Projects() {
             <span>{t("projects_viewAll")}</span>
             <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

@@ -79,11 +79,14 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-16 rounded-2xl overflow-hidden glass-card border border-border"
         >
-          <img
+          {/* <img
             src={project.image}
             alt={title}
             className="w-full h-auto object-cover"
-          />
+          /> */}
+            <video autoPlay muted loop controls poster={project.image} className="w-full h-auto">
+        <source src={project.video} type="video/mp4" />
+      </video>
         </motion.div>
 
         {/* Meta info */}

@@ -41,7 +41,7 @@ const translations: Record<Language, Record<string, string>> = {
     projects_wordpress_desc: "Developed and maintained a company website using WordPress. Improved website structure, performance, and user experience with digital marketing integration.",
     projects_frontend_title: "Frontend Component System",
     projects_frontend_desc: "Developed reusable frontend components using C#, JavaScript, .NET and Bootstrap within an Agile Scrum environment. Contributed to e-commerce platform development.",
-    projects_ux_title: "UX Design System",
+    projects_ux_title: "React platform",
     projects_ux_desc: "Created user-centered interface designs and responsive web solutions as part of Multimedia Design studies. Focused on user research, prototyping, and usability testing.",
     projects_dashboard_title: "Digital concept development",
     projects_dashboard_desc: "Analyzed webshop performance, customer behavior, and KPIs to support commercial decisions. Monitored market trends and competitor activities.",
@@ -95,9 +95,9 @@ const translations: Record<Language, Record<string, string>> = {
     skills_education_badge: "Education",
     skills_education_title: "Academic Background",
     skills_edu1_degree: "Digital Concept Development",
-    skills_edu1_desc: "Bachelor's top-up programme expanding knowledge in UX design, concept development, and game development using Unity, C#, and Blender.",
+    skills_edu1_desc: "In this Bachelor’s top-up program I could expand my knowledge and further develop myself to know the whole process of UX design and concept development. As part of the programme I joined a game development elective where I learnt how to develop games on Unity by using C# and Blender. The last part of my education was an internship where I followed my passion for programming as a Frontend developer.",
     skills_edu2_degree: "Multimedia Design",
-    skills_edu2_desc: "Focus on UX/UI design and frontend development, covering the full process from user research to implementation.",
+    skills_edu2_desc: "Studied multimedia design with a focus on UX/UI design and frontend development, covering the full process from user research to implementation. Gained hands-on experience in designing user-centered interfaces, prototyping, and developing responsive web solutions. Specialized in frontend development, working with modern web technologies to build interactive websites and applications, while collaborating in team-based projects.",
     skills_edu3_degree: "Marketing Management",
     skills_edu3_desc: "Foundation in developing and analyzing businesses, with focus on marketing strategies and business development.",
 
@@ -137,12 +137,14 @@ const translations: Record<Language, Record<string, string>> = {
     project_adobexd: "Adobe XD Design",
 
     // Shopify Project Detail
-    project_shopify_longDesc: "Managed and optimized a large-scale Shopify e-commerce store specializing in sustainable building materials. The project involved comprehensive product catalog management, customer journey optimization, and data-driven decision making to improve overall store performance.",
-    project_shopify_challenge: "The main challenge was managing a complex product catalog with 600+ items while maintaining consistent data quality and optimizing the customer journey. The store needed better organization, improved search functionality, and more effective merchandising strategies.",
-    project_shopify_solution: "Implemented a systematic approach to product management using Shopify's built-in tools combined with custom solutions. Analyzed customer behavior data to optimize product categorization and improve the checkout flow. Integrated analytics tools to track KPIs and make data-driven decisions.",
+    project_shopify_longDesc: "Managed and continuously developed a Shopify-based e-commerce store specializing in sustainable building materials with a catalog of 600+ products. Responsible for the end-to-end webshop experience including product management, visual content creation, digital marketing initiatives, Google Ads campaigns, customer journey improvements, and ongoing store optimization. Worked closely with stakeholders to align business goals with customer needs while improving overall webshop performance.",
+    project_shopify_challenge: "The store operated in a highly competitive market with a limited marketing budget, making efficient customer acquisition and conversion essential. Managing a large and diverse product catalog also presented challenges around product organization, searchability, and maintaining a smooth customer journey. Logistics added another layer of complexity due to varying product characteristics including heavy, lightweight, small, and oversized items requiring different delivery considerations.",
+    project_shopify_solution: "Built and continuously improved the webshop by managing product structures, introducing new features, and optimizing the overall customer experience. Managed digital marketing activities including Google Ads campaigns and performance tracking, focusing on improving return on ad spend (ROAS) and maximizing results within budget limitations. Created and maintained visual assets and merchandising content while analyzing customer behavior and store performance to support business decisions and ongoing improvements.",
     project_shopify_feature1: "Product catalog optimization with improved categorization",
     project_shopify_feature2: "Customer journey analysis and checkout optimization",
     project_shopify_feature3: "Marketing campaign integration and performance tracking",
+    project_shopify_feature4: "Google Ads campaign management and ROAS optimization",
+    project_shopify_feature5: "Visual content creation and merchandising",
 
     // WordPress Project Detail
     project_wordpress_longDesc: "Developed and maintained a company website for a UK-based business using WordPress. The project focused on improving website performance, user experience, and integrating digital marketing strategies to enhance online presence.",
@@ -153,28 +155,31 @@ const translations: Record<Language, Record<string, string>> = {
     project_wordpress_feature3: "Marketing integration and analytics setup",
 
     // Frontend Project Detail
-    project_frontend_longDesc: "Contributed to the development of a frontend component system for an enterprise e-commerce platform. Worked within an Agile Scrum environment to build reusable components using C#, JavaScript, .NET and Bootstrap.",
-    project_frontend_challenge: "The platform needed a unified component system that could be reused across multiple implementations while maintaining consistency and ease of use for developers.",
-    project_frontend_solution: "Developed modular frontend components following best practices and design patterns. Collaborated with the team to ensure components were well-documented and tested.",
-    project_frontend_feature1: "Reusable component architecture",
-    project_frontend_feature2: "Cross-browser compatibility and responsive design",
-    project_frontend_feature3: "Comprehensive documentation and testing",
+    project_frontend_longDesc: "Contributed to the development and continuous improvement of DynamicWeb's SWIFT e-commerce platform as part of an Agile product team. Worked with C#, JavaScript, .NET, and Bootstrap while collaborating with developers, designers, and product managers to improve functionality and user experience.",
+    project_frontend_challenge: "Developing and maintaining an enterprise e-commerce platform required balancing new functionality with platform stability and usability. Features and improvements needed to align with existing systems while supporting a consistent user experience across the platform.",
+    project_frontend_solution: "Implemented frontend components and platform improvements while resolving bugs and supporting ongoing development tasks. Participated in Agile Scrum processes including sprint planning, code reviews, and task management using Azure DevOps. Collaborated closely with cross-functional teams to contribute to product development and platform improvements.",
+    project_frontend_feature1: "Frontend component development using C#, JavaScript, .NET and Bootstrap",
+    project_frontend_feature2: "Bug fixing and platform functionality improvements",
+    project_frontend_feature3: "Agile Scrum participation and sprint planning",
+    project_frontend_feature4: "Azure DevOps workflow and code review process",
+    project_frontend_feature5: "Cross-functional collaboration with developers, designers, and product managers",
 
     // UX Design Project Detail
-    project_ux_longDesc: "Created user-centered design solutions as part of Multimedia Design studies. This project focused on the complete design process from user research to high-fidelity prototypes.",
-    project_ux_challenge: "Understanding user needs and translating them into effective design solutions that balance aesthetics with functionality.",
-    project_ux_solution: "Applied user-centered design methodology with extensive research, iterative prototyping, and usability testing to create effective design solutions.",
+    project_ux_longDesc: "Connect is a social platform designed to connect volunteers with organizations seeking help. Volunteers can browse and apply for volunteering opportunities, while organizations can post projects and recruit suitable candidates. The platform was developed as a final project at the end of an AP degree, with the UI inspiration drawn from the LinkedIn layout to create a familiar, professional networking-style experience. The project was completed over a 10-week period covering research, design, and development.",
+    project_ux_challenge: "One of the main challenges was the limited timeframe combined with a steep learning curve. During the project, React was still a new technology, so part of the development phase included learning and applying it simultaneously. Another challenge was prioritization: while modern development typically follows a mobile-first approach, the focus during this project was placed more on implementing core functionality rather than full responsiveness, which resulted in limited mobile optimization in the first version.",
+    project_ux_solution: "To address the time and skill constraints, the development process was structured to prioritize core features first, ensuring a working platform within the deadline. React was learned and applied iteratively during development, allowing rapid progress despite inexperience. The design approach was kept simple and inspired by LinkedIn to reduce complexity and improve usability. A second version of the platform is currently in development, focusing on improved responsiveness and overall user experience.",
     project_ux_feature1: "User research and persona development",
     project_ux_feature2: "Wireframing and interactive prototyping",
     project_ux_feature3: "Usability testing and iteration",
+    project_ux_feature4: "Frontend development using React and modern web technologies",
 
     // Headless Project Detail
-    project_headless_longDesc: "A headless e-commerce implementation separating the frontend presentation layer from the backend commerce platform. This approach provides greater flexibility and improved performance.",
-    project_headless_challenge: "Building a modern, fast e-commerce experience while integrating with existing systems and maintaining SEO capabilities.",
-    project_headless_solution: "Implemented a Next.js frontend with API-based integration to the commerce backend, optimizing for performance and developer experience.",
-    project_headless_feature1: "API-first architecture",
-    project_headless_feature2: "Server-side rendering for performance",
-    project_headless_feature3: "Optimized image delivery and caching",
+    project_headless_longDesc: "The project demonstrated how Dynamicweb’s headless capabilities can be used to separate content management from presentation, allowing content to be delivered via APIs and rendered in a modern frontend application. The goal was to showcase a flexible, API-driven architecture where content and commerce data could be consumed independently of the backend system.",
+    project_headless_challenge: "The main challenge was working with a headless architecture for the first time, where frontend and backend are fully decoupled. Understanding how to efficiently consume content and commerce data through APIs. Handling server-side rendering (SSR) and static generation (SSG) in Next.js.",
+    project_headless_solution: "The solution focused on building a clean Next.js frontend that communicates with Dynamicweb’s headless APIs. Using Next.js data-fetching methods (SSR/SSG/ISR) to optimize performance and content freshness. Structuring API calls to retrieve structured content from Dynamicweb’s backend",
+    project_headless_feature1: "Headless architecture separating frontend and backend",
+    project_headless_feature2: "Next.js-based frontend with SSR/SSG capabilities",
+    project_headless_feature3: "API-driven content delivery from Dynamicweb",
   },
   hu: {
     // Navbar
@@ -306,6 +311,8 @@ const translations: Record<Language, Record<string, string>> = {
     project_shopify_feature1: "Termék katalógus optimalizálás javított kategorizálással",
     project_shopify_feature2: "Vásárlói út elemzés és fizetési folyamat optimalizálás",
     project_shopify_feature3: "Marketing kampány integráció és teljesítmény követés",
+    project_shopify_feature4: "Google Ads campaign management and ROAS optimization",
+    project_shopify_feature5: "Visual content creation and merchandising",
 
     // WordPress Project Detail
     project_wordpress_longDesc: "Céges weboldal fejlesztése és karbantartása egy Egyesült Királyságbeli vállalkozás számára WordPress használatával. A projekt a weboldal teljesítményének, felhasználói élményének javítására és digitális marketing stratégiák integrálására összpontosított az online jelenlét növelése érdekében.",
