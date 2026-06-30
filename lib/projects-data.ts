@@ -47,7 +47,7 @@ export const projectsData: Project[] = [
     role: "Web & E-commerce Specialist",
     icon: "ShoppingCart",
     size: "large",
-    metrics: { products: "600+", growth: "From launch to established operation" },
+    metrics: { products: "600+", growth: "From Launch To Established Operation" },
     metricLabelsKey: { products: "projects_products", growth: "projects_growth" },
   },
   {
@@ -101,7 +101,7 @@ export const projectsData: Project[] = [
     metricLabelsKey: { components: "projects_components", reviews: "projects_reviews" },
   },
   {
-    slug: "ux-design-system",
+    slug: "react-platform",
     titleKey: "projects_ux_title",
     descriptionKey: "projects_ux_desc",
     image: "/connect.png",

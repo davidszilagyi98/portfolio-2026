@@ -73,21 +73,31 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
         </motion.div>
 
         {/* Hero image */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-16 rounded-2xl overflow-hidden glass-card border border-border"
-        >
-          {/* <img
-            src={project.image}
-            alt={title}
-            className="w-full h-auto object-cover"
-          /> */}
-            <video autoPlay muted loop controls poster={project.image} className="w-full h-auto">
-        <source src={project.video} type="video/mp4" />
-      </video>
-        </motion.div>
+       <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.1 }}
+  className="mb-16 rounded-2xl overflow-hidden glass-card border border-border"
+>
+  {project.video ? (
+    <video
+      autoPlay
+      muted
+      loop
+      controls
+      poster={project.image}
+      className="w-full h-auto"
+    >
+      <source src={project.video} type="video/mp4" />
+    </video>
+  ) : (
+    <img
+      src={project.image}
+      alt={title}
+      className="w-full h-auto object-cover"
+    />
+  )}
+</motion.div>
 
         {/* Meta info */}
         <motion.div
