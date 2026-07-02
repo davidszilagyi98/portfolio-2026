@@ -253,7 +253,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Skills
     skills_badge: "Képességek",
     skills_title: "Készségek & Tanulmányok",
-    skills_description: "Technikai fejlesztés, UX design és digitális marketing szakértelem kombinációja, amelyet tanulmányok és szakmai tapasztalat alapozott meg.",
+    skills_description: "Technikai fejlesztés, UX design és digitális marketing szakértelem, amely tanulmányokra és többéves szakmai tapasztalatra épül.",
     skills_frontend_title: "Frontend Fejlesztés",
     skills_cms_title: "CMS & E-kereskedelem",
     skills_ux_title: "UX / UI Design",
@@ -263,11 +263,11 @@ const translations: Record<Language, Record<string, string>> = {
     skills_education_badge: "Tanulmányok",
     skills_education_title: "Végzettség",
     skills_edu1_degree: "Digitális Koncepció Fejlesztés",
-    skills_edu1_desc: "Bachelor kiegészítő program UX design, koncepciófejlesztés és játékfejlesztés területén Unity, C# és Blender használatával.",
+    skills_edu1_desc: "Ezen a bachelor-kiegészítő programon bővíthettem ismereteimet és továbbfejleszthettem magam, hogy megismerjem az UX-tervezés és a koncepció kidolgozás teljes folyamatát. A program részeként egy játékfejlesztési választható tantárgyat vettem fel, ahol megtanultam, hogyan kell C# és a Blender segítségével játékokat fejleszteni a Unity-ben. Tanulmányaim utolsó szakaszát egy szakmai gyakorlat jelentette, ahol frontend-fejlesztőként hódolhattam a programozás iránti szenvedélyemnek.",
     skills_edu2_degree: "Multimédia Design",
-    skills_edu2_desc: "UX/UI design és frontend fejlesztés fókusszal, a felhasználói kutatástól a megvalósításig terjedő teljes folyamat lefedésével.",
+    skills_edu2_desc: "Multimédiatervezést tanultam, különös tekintettel az UX/UI-tervezésre és a frontend-fejlesztésre, amely a felhasználói kutatástól a megvalósításig terjedő teljes folyamatot magában foglalta. Gyakorlati tapasztalatot szereztem a felhasználóközpontú felületek tervezésében, a prototípus-készítésben és a reszponzív webes megoldások fejlesztésében. A frontend-fejlesztésre specializálódtam, modern webes technológiákkal dolgozom interaktív weboldalak és alkalmazások készítésén, miközben csapatalapú projektekben is együttműködöm.",
     skills_edu3_degree: "Marketing Menedzsment",
-    skills_edu3_desc: "Üzletek fejlesztésének és elemzésének alapjai, marketing stratégiák és üzleti fejlesztés fókusszal.",
+    skills_edu3_desc: "Alapvető ismeretek az üzleti tevékenységek fejlesztése és elemzése terén, különös tekintettel a marketingstratégiákra és az üzletfejlesztésre.",
 
     // Contact
     contact_badge: "Let's Connect",
